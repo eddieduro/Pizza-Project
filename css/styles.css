@@ -1,19 +1,16 @@
+/*========
+Hero Section
+==========*/
 .flexbox {
-	height: 400px;
+	height: 200px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	background-color: #f245d4;
 	width: 100%;
+	background-image: url('http://45.media.tumblr.com/506b5a47bea446270e3b79dba366e28f/tumblr_o1cthloCVl1sq5viio1_400.gif');
 }
 
-.flexPizza {
-	height: 200px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-}
 
 #pizzaHead {
 	color: #ffffff;
@@ -22,8 +19,32 @@
 	padding: 10px;
 }
 
+
+/*===========
+Order Form
+============*/
+.flexPizza {
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+#pizzaBorder {
+	border: 3px solid black;
+	margin-top: 300px;
+	padding-bottom: 80px;
+	padding-right: 150px;
+	padding-left: 150px;
+	padding-top: 30px;
+	-webkit-box-shadow: 10px 10px 5px -4px rgba(238,238,238,1);
+	-moz-box-shadow: 10px 10px 5px -4px rgba(238,238,238,1);
+	box-shadow: 10px 10px 5px -4px rgba(238,238,238,1);
+}
+
 #orderPizza {
-	margin-top: 50px;
+	margin-top: 30px;
 	width:200px;
 }
 
@@ -35,6 +56,7 @@
 	border: 0;
 	padding: 8px;
 	border-radius: 2px;
+	margin-top: 40px;
 }
 
 .btn-submit:hover{
@@ -45,7 +67,21 @@
 	color: black;
 }
 
+/*========
+Receipt Section
+==========*/
+#confirmation{
+	width: 500px;
+}
 #results{
 	display: none;
+	border: 3px solid black;
+	padding: 40px;
+	padding-bottom: 20px;
+	-webkit-box-shadow: 10px 10px 5px -4px rgba(238,238,238,1);
+	-moz-box-shadow: 10px 10px 5px -4px rgba(238,238,238,1);
+	box-shadow: 10px 10px 5px -4px rgba(238,238,238,1);
 }
+
+
 
