@@ -1,0 +1,15 @@
+.flexbox {
+	height: 400px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f245d4;
+	width: 100%;
+}
+
+#pizzaHead {
+	color: #ffffff;
+	font-size: 40pt;
+	border: 4px solid white;
+	padding: 10px;
+}
