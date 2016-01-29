@@ -11,3 +11,7 @@ Pizza.prototype.addPepperoni = function(){
 Pizza.prototype.addBacon = function(){
 	return this.bacon = true;
 }
+
+$(document).ready(function(){
+
+});
