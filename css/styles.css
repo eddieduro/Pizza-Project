@@ -1,3 +1,8 @@
+html, body {
+	height: 100%;
+
+}
+
 /*========
 Hero Section
 ==========*/
@@ -35,6 +40,7 @@ Order Form
 #pizzaBorder {
 	border: 3px solid black;
 	margin-top: 300px;
+	margin-bottom: 2%;
 	padding-bottom: 80px;
 	padding-right: 140px;
 	padding-left: 140px;
@@ -99,4 +105,32 @@ Receipt Section
 	border-radius: 2px;
 	margin-top: 40px;
 	display:none;
+}
+
+/*=========
+Footer
+===========*/
+.footer{
+	background-color: #8acc9e;
+	position: absolute;
+	bottom: 0;
+	height: 20px;
+	width: 100%;
+}
+
+#footBg{
+	background-color: purple;
+	width: 100%;
+}
+.footer-text {
+	padding-top: 50px;
+	color: white;
+}
+.footer-text a {
+	color: white;
+	text-decoration: underline;
+}
+
+#heart {
+	color: red;
 }
