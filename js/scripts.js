@@ -12,15 +12,6 @@ Pizza.prototype.addBacon = function(){
 	return this.bacon = true;
 }
 
-function refreshPage() {
-    window.location.href,
-    {
-      allowSamePageTransition : true,
-      transition              : 'none',
-      showLoadMsg             : false,
-      reloadPage              : true
-    }	
-}
 
 $(document).ready(function(){
 	$('form#orderPizza').submit(function(event){
