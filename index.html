@@ -19,22 +19,31 @@
 			<form id="orderPizza" class="text-center">
 				<div class="form-group">
 					<label for="size">Pick a size!</label>
-					<select class="form-control">
-					  <option value="5">8"</option>
-					  <option value="7">12"</option>
-					  <option value="10">16"</option>
-					  <option value="14">20"</option>
+					<select class="form-control" id="sizeSelect">
+					  <option value=5>8"</option>
+					  <option value=7>12"</option>
+					  <option value=10>16"</option>
+					  <option value=14>20"</option>
 					</select>
 				</div>
 				<div class="form-group">
 					<label for="size">Pick a topping!</label>
-					<select class="form-control">
-					  <option value="2">Pepperoni</option>
-					  <option value="3">Bacon</option>
+					<select class="form-control" id="toppingSelect">
+					  <option value=2>Pepperoni</option>
+					  <option value=3>Bacon</option>
 					</select>
 				</div>
 				<button type="submit" class="btn-submit">Order Meow!</button>
 			</form>
+		</div>
+	</div>
+
+	<!-- Order Output Section -->
+	<div class="container">
+		<div id="confirmation">
+			<div id="results">
+				
+			</div>
 		</div>
 	</div>
 	<!-- Scripts -->
