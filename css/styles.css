@@ -34,7 +34,7 @@ Hero Section
 Order Form
 ============*/
 .flexPizza {
-	height: 200px;
+	height: 250px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -83,18 +83,27 @@ Receipt Section
 ==========*/
 #confirmation{
 	width: 475px;
-	margin-top: -600px;
+	margin-top: -700px;
 }
 #results{
 	display: none;
-	border: 3px solid black;
+	
 	padding-bottom: 40px;
-	margin-bottom: 150px;
+	margin-bottom: -350px;
+}
+
+.resultsBorder {
+	border: 3px solid black;
 	-webkit-box-shadow: 10px 10px 5px -4px rgba(238,238,238,1);
 	-moz-box-shadow: 10px 10px 5px -4px rgba(238,238,238,1);
 	box-shadow: 10px 10px 5px -4px rgba(238,238,238,1);
+}	
+.resultsWithMap {
+	max-height: 250px;
+	margin-bottom: 550px;
+	padding-top: 40px;
+    padding-bottom: 40px;
 }
-
 #receipt {
 	font-family: 'Pragati Narrow', sans-serif;
 	font-size: 16pt;
@@ -116,7 +125,7 @@ hr#hr-receipt{
 }
 
 .hideme {
-	margin-top: -100px;
+	margin-top: -550px;
 	display: none;
 }
 
