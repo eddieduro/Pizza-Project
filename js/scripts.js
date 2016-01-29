@@ -54,14 +54,14 @@ $(document).ready(function(){
 			$('#results').prepend("<h4 class='text-center'>Order Summary</h4><hr id='hr-receipt'><br/><p id='receipt' class='text-center'>You ordered " + orderCount + ", " + size + " " + pizzaType +".</p><br/>");
 			$('#receipt').append('<p>Your total comes out to $' + totalCost + " flat - got to love no tax in Oregon! <br/>Our location is listed below.</p>");
 			$('.hideme').fadeIn(200);
-			$('#map').show();
+			$('#map').toggle();
 		} else if (newPizza.bacon && !delivery){
 			orderCount += 1;
 			pizzaType = "Bacon Pizza"
 			$('#results').prepend("<h4 class='text-center'>Order Summary</h4><hr id='hr-receipt'><br/><p id='receipt' class='text-center'>You ordered " + orderCount + ", " + size + " " + pizzaType +".</p><br/>");
 			$('#receipt').append('<p>Your total comes out to $' + totalCost + " flat - got to love no tax in Oregon! <br/> Our location is listed below.</p>");
 			$('.hideme').fadeIn(200);
-			$('#map').show();
+			$('#map').toggle();
 		// delivery option has been check below//
 		} else if(newPizza.pepperoni && delivery){
 			orderCount += 1;
@@ -79,7 +79,7 @@ $(document).ready(function(){
 	});
 
 	$('.btn-refresh').click(function(){
-		$('#map').hide();
+		$('#map').toggle();
 		$('#pizzaBorder, h3, hr').slideDown(250).dequeue().fadeIn(250);
 		$('#orderPizza').slideDown(250).dequeue().fadeIn(250);
 		$('#results').slideDown(250).dequeue().fadeOut(200);
