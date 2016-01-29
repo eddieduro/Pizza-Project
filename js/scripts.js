@@ -29,15 +29,18 @@ $(document).ready(function(){
 		} else if (topping === "Bacon") {
 			newPizza.addBacon();
 		}
+
+	$('#pizzaBorder, h3, hr').slideUp(280).dequeue().fadeOut(150);
  	$('#orderPizza').slideUp(280).dequeue().fadeOut(150);
- 	$('#results').slideDown(250).dequeue().fadeIn(200);
+
+ 	$('#results').slideUp(250).dequeue().fadeIn(200);
 		if(newPizza.pepperoni){
 			pizzaType = "Pepperoni Pizza";
-			$('#results').prepend("<p id='receipt'>You ordered a " + size + " " + pizzaType +".</p><br/>");
+			$('#results').prepend("<p id='receipt' class='text-center'>You ordered a " + size + " " + pizzaType +".</p><br/>");
 			$('#receipt').append('<p>Your total comes out to $' + totalCost + " flat - got to love no tax in Oregon!</p>");
 		} else if (newPizza.bacon){
 			pizzaType = "Bacon Pizza"
-			$('#results').prepend("<p id='receipt'>You ordered a " + size + " " + pizzaType +".</p><br/>");
+			$('#results').prepend("<p id='receipt' class='text-center'>You ordered a " + size + " " + pizzaType +".</p><br/>");
 			$('#receipt').append('<p>Your total comes out to $' + totalCost + " flat - got to love no tax in Oregon!</p>");
 		}
 	});
