@@ -13,5 +13,7 @@ Pizza.prototype.addBacon = function(){
 }
 
 $(document).ready(function(){
-
+	$('form#orderPizza').submit(function(event){
+		event.preventDefault();
+	});
 });
