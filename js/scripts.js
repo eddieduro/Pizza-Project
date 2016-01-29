@@ -79,6 +79,7 @@ $(document).ready(function(){
 	});
 
 	$('.btn-refresh').click(function(){
+		$('#map').hide();
 		$('#pizzaBorder, h3, hr').slideDown(250).dequeue().fadeIn(250);
 		$('#orderPizza').slideDown(250).dequeue().fadeIn(250);
 		$('#results').slideDown(250).dequeue().fadeOut(200);
