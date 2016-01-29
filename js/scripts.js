@@ -24,7 +24,7 @@ $(document).ready(function(){
 		var newPizza = new Pizza(size, topping);
 		var totalCost = sizeValue + toppingValue;
 		var pizzaType;
-
+		var orderCount = 0;
 		if(topping === "Pepperoni"){
 			newPizza.addPepperoni();
 		} else if (topping === "Bacon") {
@@ -36,12 +36,14 @@ $(document).ready(function(){
 
  	$('#results').slideUp(250).dequeue().fadeIn(200);
 		if(newPizza.pepperoni){
+			orderCount += 1;
 			pizzaType = "Pepperoni Pizza";
-			$('#results').prepend("<p id='receipt' class='text-center'>You ordered a " + size + " " + pizzaType +".</p><br/>");
+			$('#results').prepend("<h4 class='text-center'>Order Summary</h4><hr id='hr-receipt'><br/><p id='receipt' class='text-center'>You ordered " + orderCount + ", " + size + " " + pizzaType +".</p><br/>");
 			$('#receipt').append('<p>Your total comes out to $' + totalCost + " flat - got to love no tax in Oregon!</p>");
 		} else if (newPizza.bacon){
+			orderCount += 1;
 			pizzaType = "Bacon Pizza"
-			$('#results').prepend("<p id='receipt' class='text-center'>You ordered a " + size + " " + pizzaType +".</p><br/>");
+			$('#results').prepend("<h4 class='text-center'>Order Summary</h4><hr id='hr-receipt'><br/><p id='receipt' class='text-center'>You ordered " + orderCount + ", " + size + " " + pizzaType +".</p><br/>");
 			$('#receipt').append('<p>Your total comes out to $' + totalCost + " flat - got to love no tax in Oregon!</p>");
 		}
 		$('.btn-refresh').show();

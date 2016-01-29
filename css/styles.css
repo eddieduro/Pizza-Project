@@ -100,6 +100,10 @@ Receipt Section
 	font-size: 16pt;
 }
 
+hr#hr-receipt{
+	width: 80px;
+}
+
 .btn-refresh {
 	background-color: #f24fd1; 
 	color: #ffffff;
@@ -128,7 +132,7 @@ Footer
 	width: 100%;
 }
 .footer-text {
-	padding-top: 50px;
+	padding-top: 30px;
 	color: white;
 }
 .footer-text a {
