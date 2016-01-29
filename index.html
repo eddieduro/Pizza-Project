@@ -10,39 +10,45 @@
 <body>
 	<!-- Hero Section -->
 	<div class="container flexbox">
-		<h1 class="text-center" id="pizzaHead">Unicorn Pizza</h1>
+		<h1 class="text-center" id="pizzaHead">Unicorn Pizza | PDX</h1>
 	</div>
 
 	<!-- Order Section -->
 	<div class="container">
 		<div class="flexPizza">
-			<form id="orderPizza" class="text-center">
-				<div class="form-group">
-					<label for="size">Pick a size!</label>
-					<select class="form-control" id="sizeSelect">
-					  <option value=5>8"</option>
-					  <option value=7>12"</option>
-					  <option value=10>16"</option>
-					  <option value=14>20"</option>
-					</select>
-				</div>
-				<div class="form-group">
-					<label for="size">Pick a topping!</label>
-					<select class="form-control" id="toppingSelect">
-					  <option value=2>Pepperoni</option>
-					  <option value=3>Bacon</option>
-					</select>
-				</div>
-				<button type="submit" class="btn-submit">Order Meow!</button>
-			</form>
+			<div id="pizzaBorder">
+				<h3 class="text-center">Order Here!</h3>
+				<hr>
+				<form id="orderPizza" class="text-center">
+					<div class="form-group">
+						<label for="size">Pick a size!</label>
+						<select class="form-control" id="sizeSelect">
+						  <option value=5>8"</option>
+						  <option value=7>12"</option>
+						  <option value=10>16"</option>
+						  <option value=14>20"</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="size">Pick a topping!</label>
+						<select class="form-control" id="toppingSelect">
+						  <option value=2>Pepperoni</option>
+						  <option value=3>Bacon</option>
+						</select>
+					</div>
+					<button type="submit" class="btn-submit">Order Meow!</button>
+				</form>
+			</div>
 		</div>
 	</div>
 
-	<!-- Order Output Section -->
+	<!-- Receipt Section -->
 	<div class="container">
-		<div id="confirmation">
-			<div id="results">
-				
+		<div class="flexPizza">
+			<div id="confirmation">
+				<div id="results">
+					
+				</div>
 			</div>
 		</div>
 	</div>
