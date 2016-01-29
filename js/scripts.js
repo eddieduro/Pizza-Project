@@ -12,6 +12,16 @@ Pizza.prototype.addBacon = function(){
 	return this.bacon = true;
 }
 
+function refreshPage() {
+    window.location.href,
+    {
+      allowSamePageTransition : true,
+      transition              : 'none',
+      showLoadMsg             : false,
+      reloadPage              : true
+    }	
+}
+
 $(document).ready(function(){
 	$('form#orderPizza').submit(function(event){
 		event.preventDefault();
@@ -43,5 +53,13 @@ $(document).ready(function(){
 			$('#results').prepend("<p id='receipt' class='text-center'>You ordered a " + size + " " + pizzaType +".</p><br/>");
 			$('#receipt').append('<p>Your total comes out to $' + totalCost + " flat - got to love no tax in Oregon!</p>");
 		}
+		$('.btn-refresh').show();
+	});
+
+	$('.btn-refresh').click(function(){
+		$('#pizzaBorder, h3, hr').slideDown(250).dequeue().fadeIn(250);
+		$('#orderPizza').slideDown(250).dequeue().fadeIn(250);
+		$('#results').slideDown(250).dequeue().fadeOut(200);
+		$('.btn-refresh').hide();
 	});
 });
