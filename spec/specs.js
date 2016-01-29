@@ -4,8 +4,13 @@ describe('Pizza', function(){
 		expect(testPizza.size).to.equal(10);
 	});
 
-	it('will add the addTopping method to the pizza', function(){
+	it('will add the addPepperoni method to the pizza', function(){
 		var testPizza = new Pizza(10);
-		expect(testPizza.addTopping).to.equal("pepperoni");
+		expect(testPizza.addPepperoni()).to.equal(true);
 	});
+
+	it('will add the addBacon method to the pizza', function(){
+		var testPizza = new Pizza(10);
+		expect(testPizza.addBacon()).to.equal(true);
+	})
 });
