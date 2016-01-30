@@ -1,11 +1,11 @@
-# Ping Pong | Project
-Press the button and find out which numbers are ping and ponged,01/22/2016
+# Pizza | Project
+Order Yourself a Pizza!
 
 #### By Eddie Duro
 
 ###Description
 
-This application accepts a number and returns all values starting from 1 up to the number input by the user. Numbers that are divisible by 3 are replaced with the word 'ping'. Numbers divisible by 5 are replaced with the word 'pong'. Numbers divisible by 15 are replaced with the word 'ping pong'.
+This project utilized js and jquery as well as BDD and TDD testing. Go ahead and order yourself a pizza from unicorn pizza | PDX. A few bugs - forms aren't saving data quite yet and google maps API loading slowly.
 
 ###Technologies Used
 
