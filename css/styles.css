@@ -84,6 +84,8 @@ Address Info
 ===========*/
 form#delivery {
 	display: none;
+	margin-top: -200px;
+	margin-bottom: -100px;
 }
 /*========
 Receipt Section
