@@ -69,7 +69,7 @@ $(document).ready(function(){
           orderCount += 1;
           pizzaType = "Pepperoni Pizza";
           $('#results').prepend("<h4 class='text-center'>Order Summary</h4><hr id='hr-receipt'><br/><p id='receipt' class='text-center'>You ordered " + orderCount + ", " + size + " " + pizzaType +".</p><br/>");
-          $('#receipt').append('<p>Your total comes out to $' + totalCostDelivery +"( $" + deliveryValue +" fee has been added for delivery)" + " flat!</p><br/>" + fullAddress).addClass("resultsBorder");
+          $('#receipt').append('<p>Your total comes out to $' + totalCostDelivery +"( $" + deliveryValue +" fee has been added for delivery)" + " flat!</p><br/>" + fullAddress +"<br/><i class='fa fa-cc-visa'></i> & <i class='fa fa-cc-amex'></i> accepted at delivery").addClass("resultsBorder");
         } else if (newPizza.bacon && delivery){
           orderCount += 1;
           pizzaType = "Bacon Pizza"
