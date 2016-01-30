@@ -57,23 +57,33 @@ $(document).ready(function(){
       $('form#delivery').slideUp(250).dequeue().fadeIn(200);
       $('form#delivery').submit(function(event){
         event.preventDefault();
+        var inputtedName = $('input#name').val();
+        var inputtedStreet = $('input#street').val();
+        var inputtedCity = $('input#city').val();
+        var inputtedState = $('input#state').val();
+        var inputtedZip = $('input#zip').val();
+
+        var fullAddress = "Thanks for your order, " + inputtedName + ". Your order is on its way to " + inputtedStreet + ", " + inputtedCity + ", " + inputtedZip + "."
+
         if(newPizza.pepperoni && delivery){
           orderCount += 1;
           pizzaType = "Pepperoni Pizza";
           $('#results').prepend("<h4 class='text-center'>Order Summary</h4><hr id='hr-receipt'><br/><p id='receipt' class='text-center'>You ordered " + orderCount + ", " + size + " " + pizzaType +".</p><br/>");
-          $('#receipt').append('<p>Your total comes out to $' + totalCostDelivery +"( $" + deliveryValue +" fee has been added for delivery)" + " flat!</p>").addClass("resultsBorder");
+          $('#receipt').append('<p>Your total comes out to $' + totalCostDelivery +"( $" + deliveryValue +" fee has been added for delivery)" + " flat!</p><br/>" + fullAddress).addClass("resultsBorder");
         } else if (newPizza.bacon && delivery){
           orderCount += 1;
           pizzaType = "Bacon Pizza"
           $('#results').prepend("<h4 class='text-center'>Order Summary</h4><hr id='hr-receipt'><br/><p id='receipt' class='text-center'>You ordered " + orderCount + ", " + size + " " + pizzaType +".</p><br/>");
-          $('#receipt').append('<p>Your total comes out to $' + totalCostDelivery +"( $" + deliveryValue +" fee has been added for delivery)" + " flat!</p>").addClass("resultsBorder");
+          $('#receipt').append('<p>Your total comes out to $' + totalCostDelivery +"( $" + deliveryValue +" fee has been added for delivery)" + " flat!</p><br/>" + fullAddress).addClass("resultsBorder");
         }
         $('.btn-refresh').show();
         $('#addressBtn').hide();
-         $('form#delivery').hide();
+        $('form#delivery').hide();
+
       }); 
-$('.btn-refresh').hide();
-    }else if(!delivery){ 
+      $('.btn-refresh').hide();
+
+    } else if(!delivery){ 
         if(newPizza.pepperoni && !delivery){
   			orderCount += 1;
   			pizzaType = "Pepperoni Pizza";
@@ -91,7 +101,7 @@ $('.btn-refresh').hide();
   			$('#map').toggle();
         $('.btn-refresh').show();
   		// delivery option has been check below//
-  		} 
+  		}
     } 
 	});
 
