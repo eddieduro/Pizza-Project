@@ -18,6 +18,7 @@ Pizza.prototype.addDelivery = function(){
 
 
 $(document).ready(function(){
+  var orderCount;
 	$('form#orderPizza').submit(function(event){
 		event.preventDefault();
 		var sizeValue = parseInt($('#sizeSelect option:selected').val());
@@ -27,26 +28,33 @@ $(document).ready(function(){
 		var size = $('#sizeSelect option:selected').text();
 		var topping = $('#toppingSelect option:selected').text();
 		var delivery = $('input[name=delivery]:checked').val();
-
+		
 		var newPizza = new Pizza(size, topping);
 		var totalCost = sizeValue + toppingValue;
 		var totalCostDelivery = sizeValue + toppingValue + deliveryValue;
 		var pizzaType;
 		var orderCount = 0;
+
 		if(topping === "Pepperoni"){
 			newPizza.addPepperoni();
 		} else if (topping === "Bacon") {
 			newPizza.addBacon();
 		}
-
 		if(delivery === "Delivery"){
 			newPizza.addDelivery();
 		}
+	  $('#pizzaBorder, h3, hr').slideUp(280).dequeue().fadeOut(150);
+ 	  $('#orderPizza').slideUp(280).dequeue().fadeOut(150);
+ 	  $('#results').slideUp(250).dequeue().fadeIn(200);
 
-	$('#pizzaBorder, h3, hr').slideUp(280).dequeue().fadeOut(150);
- 	$('#orderPizza').slideUp(280).dequeue().fadeOut(150);
+    $('.btn').click(function(){
+      orderCount = orderCount + 1;
+      return orderCount;
+    });
 
- 	$('#results').slideUp(250).dequeue().fadeIn(200);
+    if (delivery) {
+      $('form#delivery').slideUp(250).dequeue().fadeIn(200);
+    }
  		//if pickup option has been checked//
 		if(newPizza.pepperoni && !delivery){
 			orderCount += 1;
@@ -62,6 +70,7 @@ $(document).ready(function(){
 			$('#receipt').append('<p>Your total comes out to $' + totalCost + " flat - got to love no tax in Oregon! <br/> Our location is listed below.</p>").addClass("resultsWithMap").addClass("resultsBorder");
 			$('.hideme').fadeIn(200);
 			$('#map').toggle();
+
 		// delivery option has been check below//
 		} else if(newPizza.pepperoni && delivery){
 			orderCount += 1;
@@ -75,12 +84,14 @@ $(document).ready(function(){
 			$('#results').prepend("<h4 class='text-center'>Order Summary</h4><hr id='hr-receipt'><br/><p id='receipt' class='text-center'>You ordered " + orderCount + ", " + size + " " + pizzaType +".</p><br/>");
 			$('#receipt').append('<p>Your total comes out to $' + totalCostDelivery +"( $" + deliveryValue +" fee has been added for delivery)" + " flat!</p>").addClass("resultsBorder");
 		}
+
+
 		$('.btn-refresh').show();
+    
 	});
 
 	$('.btn-refresh').click(function(){
 		$('#results').last().children().remove();
-
 		$('.hideme').fadeOut(100);
 		$('#map').hide();
 		$('#pizzaBorder, h3, hr').slideDown(250).dequeue().fadeIn(250);

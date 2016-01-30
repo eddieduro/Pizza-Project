@@ -12,7 +12,5 @@ describe('Pizza', function(){
 	it('will add the addBacon method to the pizza', function(){
 		var testPizza = new Pizza(10);
 		expect(testPizza.addBacon()).to.equal(true);
-	});
-
-	
+	});	
 });
