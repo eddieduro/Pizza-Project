@@ -78,6 +78,13 @@ Order Form
 	color: black;
 }
 
+
+/*=========
+Address Info
+===========*/
+form#delivery {
+	display: none;
+}
 /*========
 Receipt Section
 ==========*/
