@@ -108,6 +108,45 @@ SideBar
 	text-decoration: none;
 }
 
+#more{
+	padding: 20px;
+	padding-left: 40px;
+	font-size: 18pt;
+	color: #ccc;
+}
+
+#more:hover{
+	text-decoration: none;
+	color: purple;
+}
+
+#more:active, #more:focus{
+	text-decoration: none;
+	color: purple;
+}
+
+#plus{
+	padding-left: 5px;
+	font-size: 18pt;
+}
+/*===========
+Sidebar popout
+=============*/
+.grid{
+	height: 300px;
+	width: 300px;
+	position: absolute;
+}
+
+.bg {
+	background-color: black;
+	height: 100%;
+	width: 100%;
+}
+
+#startLeft{
+	left: -280px;
+}
 /*===========
 Order Form
 ============*/
