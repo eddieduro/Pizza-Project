@@ -121,7 +121,7 @@ $(document).ready(function(){
     if (slideOut){
     $('.grid').animate({left:'-280px'}, {queue: false, duration: 500});
   } else {
-    $('.grid').animate({left:'0px'}, {queue: false, duration: 500});
+    $('.grid').animate({left:'150px'}, {queue: false, duration: 500});
   } 
   slideOut = !slideOut
   });
