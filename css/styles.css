@@ -129,6 +129,18 @@ SideBar
 #plus{
 	padding-left: 5px;
 	font-size: 18pt;
+	color: #ccc;
+	margin-left: -20px;
+}
+
+#plus:hover {
+	text-decoration: none;
+	color: purple;
+}
+
+#plus:active, #plus:focus {
+	text-decoration: none;
+	color: purple;
 }
 /*===========
 Sidebar popout

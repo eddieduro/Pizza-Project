@@ -120,8 +120,10 @@ $(document).ready(function(){
   $('#more').click(function(){
     if (slideOut){
     $('.grid').animate({left:'-280px'}, {queue: false, duration: 500});
+    $(this).html('More');
   } else {
     $('.grid').animate({left:'150px'}, {queue: false, duration: 500});
+    $(this).html("Less");
   } 
   slideOut = !slideOut
   });
