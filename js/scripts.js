@@ -115,4 +115,14 @@ $(document).ready(function(){
 		$('.btn-refresh').hide();
     $('#addressBtn').show();
 	});
+  var slideOut;
+
+  $('#more').click(function(){
+    if (slideOut){
+    $('.grid').animate({left:'-280px'}, {queue: false, duration: 500});
+  } else {
+    $('.grid').animate({left:'0px'}, {queue: false, duration: 500});
+  } 
+  slideOut = !slideOut
+  });
 });
